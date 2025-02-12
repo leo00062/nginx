@@ -1,0 +1,27 @@
+#  Environement dev nginx
+services:
+  monnginx:
+    build: ./front
+    ports: 
+      - "8000:80"
+    volumes:
+      - ./front/app:/usr/share/nginx/html
+    environment:
+      - MYSL_PASSWORD=${PASSWORD}
+
+
+
+
+
+
+
+
+
+      #  - type: volume
+      #    source: mes_datas
+      #      - type: bind
+      #        source: ./front/app
+      #    target: /usr/share/nginx/html
+
+#volumes: 
+#  mes_datas:
